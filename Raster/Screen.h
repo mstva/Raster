@@ -1,5 +1,6 @@
 #pragma once
 #include "SDL.h"
+#include "Constants.h"
 
 class Screen
 {
@@ -8,12 +9,13 @@ public:
 	Screen();
 
 	// public functions
-	void initScreen();
+	bool initScreen();
 	void closeScreen();
 	void runScreen();
 
 private:
 	// private functions
+	void processInput();
 	void updateScreen();
 	void renderScreen();
 
