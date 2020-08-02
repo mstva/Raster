@@ -1,4 +1,9 @@
 #include "Screen.h"
+#include "Pixel.h"
+#include  "Box.h"
+
+Pixel pixel;
+Box box;
 
 Screen::Screen() :
     mWindow(nullptr),
@@ -87,8 +92,11 @@ void Screen::updateScreen()
 void Screen::renderScreen()
 {
     // set background color
-    SDL_SetRenderDrawColor(mRenderer, 80, 50, 15, 255);
+    SDL_SetRenderDrawColor(mRenderer, 0, 0, 0, 255);
     SDL_RenderClear(mRenderer);
+
+    // draw pixel on screen
+    pixel.plot_pixel_ndc(0.5, 0.5, mRenderer);
 
     // present the render on the screen
     SDL_RenderPresent(mRenderer);

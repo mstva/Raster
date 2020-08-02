@@ -1,0 +1,11 @@
+#include "Pixel.h"
+
+void Pixel::plot_pixel_ndc(float ndcX, float ndcY, SDL_Renderer* mRenderer)
+{
+
+    float wdcX = ndcX * (WIDTH / 2) + (WIDTH / 2);
+    float wdcY = ndcY * (HEIGHT / 2) + (HEIGHT / 2);
+
+    SDL_SetRenderDrawColor(mRenderer, 255, 255, 255, 255);
+    SDL_RenderDrawPoint(mRenderer, (int)wdcX, (int)wdcY);
+}
