@@ -98,6 +98,9 @@ void Screen::renderScreen()
     // draw pixel on screen
     pixel.plot_pixel_ndc(0.5, 0.5, mRenderer);
 
+    // draw box on screen
+    box.plot_box_ndc(0, 0, 50, 50, mRenderer);
+
     // present the render on the screen
     SDL_RenderPresent(mRenderer);
 }
