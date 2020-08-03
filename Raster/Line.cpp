@@ -25,32 +25,3 @@ void Line::drawLineDDA(int x1, int y1, int x2, int y2, SDL_Renderer* mRenderer)
 
 
  }
-
-void Line::drawLineBresenham(int x1, int y1, int x2, int y2, SDL_Renderer* mRenderer)
-{
-	int x, y, deltaX, deltaY, p;
-
-	x = x1;
-	y = y1;
-
-	deltaX = x2 - x1;
-	deltaY = y2 - y1;
-
-	p = (2 * deltaX) - deltaY;
-
-	while ( x <= x2 )
-	{
-		pixel.plot_pixel_wdc(x, y, mRenderer);
-		x++;
-
-		if ( p < 0 )
-		{ 
-			p += 2 * deltaY;
-		}
-		else
-		{
-			p += (2 * deltaY) - (2 * deltaX);
-			y++;
-		}
-	}
-}

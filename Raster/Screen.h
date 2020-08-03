@@ -28,7 +28,5 @@ private:
 
 	// logic variables
 	bool isRunning;
-	Box box;
-	Line line;
 };
 

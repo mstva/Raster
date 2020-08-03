@@ -10,7 +10,6 @@ public:
 
 	// public functions
 	void drawLineDDA(int x1, int y1, int x2, int y2, SDL_Renderer* mRenderer);
-	void drawLineBresenham(int x1, int y1, int x2, int y2, SDL_Renderer* mRenderer);
 
 private:
 	// private functions
