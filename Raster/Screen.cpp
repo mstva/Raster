@@ -1,12 +1,11 @@
 #include "Screen.h"
 
-Box box;
-Line line;
-
 Screen::Screen() :
     mWindow(nullptr),
     mRenderer(nullptr),
-    isRunning(true)
+    isRunning(true),
+    box(),
+    line()
 {
 }
 
@@ -95,6 +94,10 @@ void Screen::renderScreen()
 
     // draw line on screen
     line.drawLineDDA(50, 40, 100, 70, mRenderer);
+
+    // draw line on screen using Bresenham algorithm
+    line.drawLineBresenham(50, 50, 300, 500, mRenderer);
+
 
     // present the render on the screen
     SDL_RenderPresent(mRenderer);
