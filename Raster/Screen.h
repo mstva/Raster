@@ -1,6 +1,9 @@
 #pragma once
 #include "SDL.h"
 #include "Constants.h"
+#include "Pixel.h"
+#include "Box.h"
+#include "Line.h"
 
 class Screen
 {
