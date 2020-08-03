@@ -9,3 +9,9 @@ void Pixel::plot_pixel_ndc(float ndcX, float ndcY, SDL_Renderer* mRenderer)
     SDL_SetRenderDrawColor(mRenderer, 255, 255, 255, 255);
     SDL_RenderDrawPoint(mRenderer, (int)wdcX, (int)wdcY);
 }
+
+void Pixel::plot_pixel_wdc(int wdcX, int wdcY, SDL_Renderer* mRenderer)
+{
+    SDL_SetRenderDrawColor(mRenderer, 255, 255, 255, 255);
+    SDL_RenderDrawPoint(mRenderer, wdcX, wdcY);
+}
